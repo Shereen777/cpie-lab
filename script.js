@@ -116,7 +116,7 @@ const particles = Array.from({ length: PARTICLE_COUNT }, () => ({
   vx: (Math.random() - 0.5) * 0.3,
   vy: (Math.random() - 0.5) * 0.3,
   r: Math.random() * 1.6 + 0.4,
-  hue: Math.random() < 0.5 ? 260 : 190
+  hue: Math.random() < 0.5 ? 215 : 220
 }));
 
 let mouseX = -9999, mouseY = -9999;
@@ -145,7 +145,7 @@ function drawParticles() {
 
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = `hsla(${p.hue}, 90%, 65%, 0.6)`;
+    ctx.fillStyle = `hsla(${p.hue}, 38%, 70%, 0.6)`;
     ctx.fill();
   });
 
@@ -159,7 +159,7 @@ function drawParticles() {
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
         ctx.lineTo(b.x, b.y);
-        ctx.strokeStyle = `hsla(220, 80%, 70%, ${0.15 * (1 - d/130)})`;
+        ctx.strokeStyle = `hsla(215, 35%, 60%, ${0.22 * (1 - d/130)})`;
         ctx.lineWidth = 0.6;
         ctx.stroke();
       }
